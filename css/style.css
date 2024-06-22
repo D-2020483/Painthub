@@ -1,0 +1,485 @@
+@import url(../css/fonts.css);
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #0c0a0a;
+    
+}
+:root{
+    /*----Theme colors--------*/
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+
+    /*----gradient color----*/
+    --sky: linear-gradient(120deg,#0d2b5c 0%,#c2e9fb 100%);
+
+    /*----font family theme--- */
+    --Abel:'Abel', cursive;
+    --Anton:'Anton', cursive;
+    --Josefin:'Josefin', cursive;
+    --Lexend:'Lexend', cursive;
+    --Livvic:'Livvic', cursive;
+}
+
+/*------------Global classes------------*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family:var(--Josefin);
+    font-size: 70px;
+    color: black;
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.4rem;
+    color: black;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+
+
+
+/*------x------Global classes-------x-----*/
+
+/*---------------navbar------------------*/
+.nav{
+    background: white;
+    padding:0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height: 50rem;
+}
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend);
+    font-size: 1.6rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+.nav .social i{
+    padding:0 .2rem;
+}
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+/*--------x-------navbar----------x--------*/
+
+/*-----------------Main content-------------*/
+
+/*-------------site title-----------------*/
+    main .site-title{
+        background: url('../assets/serene_and_chic_purple_can_do_wonders.jpg');
+        background-size: cover;
+        height: 110vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    main .site-title .site-background{
+        padding: 10rem;
+        text-align: center;
+        color: black;
+    }
+
+    main .site-title h1,h3{
+        margin: .3rem;
+
+    }
+    
+    h3{
+        color: rgb(243, 144, 97);
+    }
+
+    main .site-title .btn{
+        margin: 1.8rem;
+        background:#583939;
+    }
+
+    main .site-title .btn:hover{
+        background: transparent;
+        border: 1px solid var(--white);
+        color: var(--white);
+
+    }
+
+/*-------x------site title----------x-------*/
+/*-------------about us section-------------*/
+.about-section{
+    background: url(../assets/Services_PainterHandyman_1024x1024.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 90px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #0c0a0a;
+    padding: 100px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    color:#1ABC9C ;
+    
+}
+
+.text{
+    font-size: 13px;
+    color: #f8f2f2;
+    line-height: 25px;
+    text-align : justify;
+    margin-bottom: 40px;
+   
+}
+
+/*-------------about us section-------------*/
+
+/*-------------products and tools-------------*/
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 3rem 2rem;
+}
+
+.container .title{
+    font-size: 2.5rem;
+    color: #1ABC9C;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.container .products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap:2rem;
+
+}
+
+.container .products-container .product{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #1f0e0e;
+    box-shadow: 0 .5rem 1rem rgba(17, 1, 1, 0.418);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .products-container .product:hover{
+    outline: .2rem solid #8b0f0f;
+    outline-offset: 0;
+}
+
+
+.container .products-container .product img{
+    height: 20rem;
+}
+
+.container .products-container .product:hover img{
+    transform: scale(.9);
+}
+
+.container .products-container .product h3{
+    padding:.5rem 0;
+    font-size: 1rem;
+    color: #444;
+
+}
+
+.container .products-container .product:hover h3{
+    color: #3e196e;
+}
+
+.container .products-container .product .price{
+    font-size: 1.5rem;
+    color: #d4a0ad;
+
+}
+
+/*-------x------products and tools-------x------*/
+
+/*-------------contact us-------------*/
+.contactus{
+    width: 100%;
+    min-height: 100vh;
+    background: #140d18;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background: #583939;
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 3vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 1rem;
+}
+
+form h2{
+    color: rgb(26, 1, 26);
+    font-weight: 800;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: var(--Anton);
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 0.8em 0;
+    padding: 20px;
+    outline: none;
+    background: #e2e2e2;
+    font-size: 16px;
+    border-radius: 1em;
+    transition: all 0.5s;
+}
+form input:focus, form textarea:focus{
+    background: #eeee;
+}
+form textarea{
+    resize: none;
+}
+
+form button{
+    padding: 0.8em;
+    background: #34aad8;
+    color: #fff;
+    font-size: 1.2em;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 10em;
+    margin: 2em auto 0;
+    border-radius: 2em;
+    
+}
+
+span{
+    color: #40ff;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+/*-------x------contact us-------x------*/
+
+/*-------------location map-------------*/
+.map{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.map h1{
+    color:#1ABC9C;
+    margin-bottom: 60px;
+    font-family: var(--Lexend);
+    font-size: 40px;
+
+
+    
+
+}
+
+iframe{
+    width: 80%;
+    height: 500px;
+    filter: invert(100%);
+}
+
+/*-------x------location map-------x------*/
+
+/*---------x--------Main content-------x------*/
+
+/*--------------------footer----------------*/
+footer.footer{
+    height: 100%;
+    background: var(--midnight);
+    position: relative;
+}
+
+footer.footer .containeR{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .containeR > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .containeR h2{
+    color: var(--sky);
+    font-family: var(--Lexend);
+}
+
+footer.footer .openat .form-element{
+    background:#0c0a0a;
+    display: inline-block;
+}
+
+footer.footer .openat .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: rgb(8, 8, 8);
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .openat .form-element span{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0 .4rem;
+}
+
+footer.footer .rights{
+    justify-content: center;
+    font-family: var(--Josefin);
+}
+
+footer.footer .rights h4 a{
+    color: var(--text-gray);
+}
+
+
+/* ---------x------- Footer ----------x---------- */
+
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1130px){
+
+    footer.footer .containeR{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*-----------x---------footer--------x--------*/
+
+
+/*--------viewport less than or equal to 750px----------*/
+@media only screen and (max-width:750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+    .inner-container{
+        padding: 80px;
+    }
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .container{
+       padding-left: 0%;
+       
+    }
+
+    
+} 
+
+/*----x----viewport less than or equal to 750px-----x----*/
+
+
+
+
